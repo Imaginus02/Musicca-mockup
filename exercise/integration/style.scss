@@ -1,0 +1,154 @@
+$green: #72ac51;
+$dark-green: #47752d;
+$background-gray: #ebebeb;
+$text-dark-gray: #1b1b1b;
+$text-light-gray: #565656;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $text-dark-gray;
+    background-color: $background-gray;
+}
+
+a {
+    /*
+        Getting rid of default formatting for <a> elements. `inherits` tells that
+        `a` elements should use the value set on its parent for these properties.
+    */
+    text-decoration: inherit;
+    color: inherit;
+}
+
+
+
+
+.top-header {
+    background: white;
+    height: 75px;
+
+    .content {
+        max-width: 1070px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        .logo {
+            width: 180px;
+            height: 75px;
+            background-image: url(./assets/img/musicca-logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .primary-menu, .secondary-menu {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        .primary-menu {
+            flex-grow: 1;
+            margin-left: 20px;
+            .menu-item:hover, .menu-item.active {
+                background-color: $background-gray;
+            }
+        } 
+
+        .secondary-menu {
+            .menu-item { 
+                background-color: $green;
+                color: white;
+                &:hover {
+                    background-color: $dark-green;
+                }
+            }
+        }
+    }
+
+    .menu-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 99999px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.page-content {
+    max-width: 1070px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+
+    display: flex;
+    column-gap: 20px;
+
+    .left-panel {
+        width: 25%;
+
+        .menu {
+            background-color: white;
+
+            .menu-item {
+                font-size: 18px;
+                padding: 20px;
+                font-weight: 600;
+
+                &.active {
+                    color: white;
+                    background-color: $green;
+                }
+            }
+
+            hr {
+                border-bottom: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                border-top: 1px solid $background-gray;
+            }
+        }
+    }
+
+    .right-panel {
+        width: 75%;
+
+        .title {
+            font-size: 36px;
+            font-weight: 400;
+            color: $text-light-gray;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .card {
+                background-color: white;
+                padding-top: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+                flex-basis: 40%;
+
+                .title {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+
+                .illustration {
+                    background-image: url(./assets/img/company.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    height: 150px;
+                    margin-left: -30px;
+                    margin-right: -30px;
+                }
+            }
+        }
+    }
+}
