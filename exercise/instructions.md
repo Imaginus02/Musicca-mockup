@@ -25,6 +25,9 @@ Or you can send it to me via email :
 - ZIP your project directory
 - Send it to qrichaud.pro@gmail.com
 
+
+# Assignment
+
 In the `integration` directory, you have a working implementation of the desktop mockup for the Musicca "about" webpage.
 
 There are 2 mockups that represent how the website should look on a mobile webpage (screen size <= 480px).
