@@ -344,3 +344,4 @@ nicely on all screen sizes.
 
 To put this principles in practice, you can do the exercise proposed in the directory `./exercise`.
 You will find the instructions in the document `./exercise/instructions.md`
+I will give a small grade to this exercise. You can submit it for the 12th november 2022 at midnight.
