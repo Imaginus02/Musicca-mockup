@@ -11,4 +11,4 @@ if [ -z "$SASS_EXEC" ]; then
   exit 1
 fi
 
-sass --watch style.scss output.css
+sass --watch integration/style.scss integration/build/output.css

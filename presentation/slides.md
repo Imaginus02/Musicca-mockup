@@ -24,8 +24,8 @@ Responsive design is the art of making a ressource suited for all kind of device
 
 Examples of not responsive designs :
 
-- badly designed for smartphones : https://old.reddit.com/
-- badly designed for laptops (unfortunately a rising trend) : https://dnevozhai.com/
+- badly designed for smartphones : https://old.reddit.com/ , https://docs.oracle.com/javase%2F7%2Fdocs%2Fapi%2F%2F/overview-summary.html
+- badly designed for laptops (unfortunately a rising trend) : https://www.tnp-villeurbanne.com/ , https://www.ter.sncf.com/auvergne-rhone-alpes
 
 ---
 
@@ -55,12 +55,13 @@ more or less easy to implement.
 
 # Responsive design
 
-The main constraints of a website designed for a good smartphone accessibility :
+The main constraints of a website designed for a good smartphone accessibility:
 - The screen is small. How to display efficiently all your data while keeping it readable.
 - The pointer method (fingers) is not accurate. You can't have small links or buttons.
 
-On a small screen, you will be able to display less information in the same time, and to 
-be smart on ways to navigate towards all the information your website should provide.
+On a small screen, you will be able to display less information in the same time, and 
+you need to 
+be smart on the way to navigate towards all the information your website should provide.
 
 ---
 
@@ -114,7 +115,7 @@ Finally, some heavy featured applications are better as native apps than website
 # Mobile website vs. native application
 
 
-The advantages of a website designed for mobile vs. a native mobile application :
+The advantages of a website designed for mobile vs. a native mobile application:
 - more portable
 - no installation required
 - easy to update
@@ -153,6 +154,8 @@ The parameters we can adjust :
   of absolute
 - Applying max/min sizes property
 
+*See demo code 1*
+
 ---
 
 # Tools for responsive website development
@@ -165,6 +168,9 @@ Flexbox especially has interesting features :
 - we can change the order of elements 
 - we can define how the elements will grow or shrink to use the available container space
 - we can wrap elements : they will dispay on several lines if not enough space is available in the container flex direction
+
+
+*See demo code 2 & 3*
 
 ---
 
@@ -228,6 +234,8 @@ combining two rules. (This is usually to target a tablet).
   /* CSS rules go here */
 }
 ```
+
+*See demo code 4 & 5*
 
 ---
 
@@ -316,6 +324,21 @@ $mobile-landscape-width: 1000px;
 
 ---
 
+# Enhance your responsive experience with dedicated JS
+
+You should rely as best as you can on CSS to make your website responsive. Although
+you could also conditionnally display and hide elements with JS. There are some 
+problems to use JS primarily for that.
+
+However it is good practice to enhance the functionality of your responsive design
+by using JS in conjunction with CSS media queries. See the demo n° 6 for an example
+of mobile responsive menu with JS.
+
+JS frontend frameworks (such as VueJS) will also have built-in tools to help 
+you make your website responsive. However this is not within the scope of this lecture. 
+
+---
+
 # Bonus : simulating slow bandwidth
 
 Another aspect of mobile website development, is to think of the fact that on mobile, it is 
@@ -327,7 +350,7 @@ that content is being loaded ?
 
 You can simulate a slow bandwidth with the chrome developper tools.
 
-Example with https://twitter.com/
+Example with https://www.thefork.fr/
 
 ---
 
@@ -340,8 +363,17 @@ nicely on all screen sizes.
 
 ---
 
-# Exercise
+# Assignment
 
-To put this principles in practice, you can do the exercise proposed in the directory `./exercise`.
-You will find the instructions in the document `./exercise/instructions.md`
-I will give a small grade to this exercise. You can submit it for the 12th november 2022 at midnight.
+To put this principles in practice, you have to do the assignment described in the directory `./assignment`.
+
+
+You will find the instructions in the document `./assignment/instructions.md`
+
+I will give a small grade to this assignment. It is due for the 18/12/2023 in the evening.
+
+Submission procedure : 
+
+- Send it as a git repository (be sure to make it public, so I don't have access issues),
+  or send it as a ZIP folder to my email address.
+- Use the email address : qrichaud.pro@gmail.com
