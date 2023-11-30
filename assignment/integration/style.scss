@@ -1,13 +1,18 @@
+// variables
 $green: #72ac51;
-$dark-green: #47752d;
 $background-gray: #ebebeb;
-$text-dark-gray: #1b1b1b;
-$text-light-gray: #565656;
+$default-text-darkgray: #1b1b1b;
+$active-link-background-gray: #eee;
+$active-link-background-darkgreen: #47752d;
+$page-title-gray: #565656;
+$semi-bold-font-weight: 600;
+$regular-font-weight: 400;
 
 body {
+    color: $default-text-darkgray;
     font-family: 'Open Sans', sans-serif;
-    color: $text-dark-gray;
     background-color: $background-gray;
+
 }
 
 a {
@@ -19,88 +24,139 @@ a {
     color: inherit;
 }
 
+.above-header {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    .header {
+        flex-direction: row;
+        justify-content: center;
+        height:75px;
+        position: relative;
+        width: 1070px;
 
-
-
-.top-header {
-    background: white;
-    height: 75px;
-
-    .content {
-        max-width: 1070px;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-
-        .logo {
-            width: 180px;
-            height: 75px;
-            background-image: url(../assets/img/musicca-logo.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .primary-menu, .secondary-menu {
-            display: flex;
-            column-gap: 20px;
-        }
-
-        .primary-menu {
-            flex-grow: 1;
-            margin-left: 20px;
-            .menu-item:hover, .menu-item.active {
-                background-color: $background-gray;
-            }
-        } 
-
-        .secondary-menu {
-            .menu-item { 
-                background-color: $green;
-                color: white;
+        .links {
+            display:flex;
+            flex-direction: row;
+            flex: 2;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+            .header_button {
+                font-size: 14px;
+                margin-right: 50px;
+                margin-left: 0px;
+                padding: 10px 15px;
+                border-radius: 15px;
+                font-weight: $semi-bold-font-weight;
+                flex: 1;
+                background-color:white;
                 &:hover {
-                    background-color: $dark-green;
+                    background-color:$active-link-background-gray;
                 }
             }
         }
-    }
+        .logo_container {
+            align-items: center;
+            justify-content: left;
+            display: flex;
+            flex-grow: 1;
+            .logo {
+                width: 180px;
+                height: 30px;
+                position: absolute;
+                flex: 1;
+                margin-top: auto;
+                margin-left: 0;
+                justify-self: left;
+            }
+        }
 
-    .menu-item {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 99999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
+
+
+        .account {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: stretch;
+            gap: 10px;
+            font-size: 14px;
+            .button {
+                font-weight: $regular-font-weight;
+                display: flex;
+                white-space: nowrap;
+                line-height: 1;
+                background-color:$green;
+                font-size: 14px;
+                padding: 10px 15px;
+                border-radius: 15px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                color:white;
+                &:hover {
+                    background-color: $active-link-background-darkgreen;
+                }
+            }
+            .activated-button {
+                font-weight: $regular-font-weight;
+                display: flex;
+                white-space: nowrap;
+                line-height: 1;
+                background-color:$active-link-background-darkgreen;
+                font-size: 14px;
+                padding: 10px 15px;
+                border-radius: 15px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                color:white;
+            }
+        }
     }
 }
 
-.page-content {
-    max-width: 1070px;
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    padding-bottom: 15px;
+    font-weight: $regular-font-weight;
+    color: $active-link-background-gray;
+    .menu-item {
+        height: 50px;
+        background-color: $green;
+        display: flex;
+        align-items: center;
+        border-bottom: solid #1b1b1b 1px;
+        padding-left: 10px;
+    }
+}
+.nav-menu .menu-item.active {
+    font-weight: $semi-bold-font-weight;
+}
+
+.corps {
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20px;
-
     display: flex;
-    column-gap: 20px;
-
     .left-panel {
-        width: 25%;
-
+        width : 25vw;
         .menu {
             background-color: white;
-
-            .menu-item {
+            display: flex;
+            flex-direction: column;
+            .hoverable {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
                 font-size: 18px;
-                padding: 20px;
                 font-weight: 600;
-
-                &.active {
-                    color: white;
+                &:hover {
                     background-color: $green;
+                    color: white;
                 }
             }
 
@@ -108,38 +164,40 @@ a {
                 border-bottom: 0;
                 margin-top: 0;
                 margin-bottom: 0;
-                border-top: 1px solid $background-gray;
+                border-top: 2px solid $background-gray;
             }
         }
     }
 
-    .right-panel {
-        width: 75%;
-
-        .title {
+    .principal {
+        .text-before-blocs {
             font-size: 36px;
             font-weight: 400;
-            color: $text-light-gray;
+            color: $page-title-gray;
         }
 
-        .cards {
+        .blocs {
+            gap: 20px;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-
-            .card {
+        
+            .bloc {
                 background-color: white;
-                padding-top: 30px;
-                padding-left: 30px;
-                padding-right: 30px;
-                flex-basis: 40%;
 
-                .title {
-                    font-weight: 600;
+                .bloc-title {
                     font-size: 20px;
+                    font-weight: $semi-bold-font-weight;
                 }
 
-                .illustration {
+                .bloc-text {
+                    font-size: 15px;
+                    font-weight: $regular-font-weight;
+                    .text-replacing-image {
+                        color:#aaa;
+                    }
+                }
+
+                .img-container {
                     background-image: url(../assets/img/company.jpg);
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -149,6 +207,163 @@ a {
                     margin-right: -30px;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .above-header {
+        height: 50px;
+        .burger-logo {
+            background-image: url(../assets/img/burger_menu_icon.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 25px;
+            width: 25px;
+            margin: auto;
+            margin-right: 10px;
+        }
+        .burger-logo.active {
+            background-image: url(../assets/img/close_menu_icon.png);
+        }
+        .header {
+            display: none;
+        }
+    }
+
+    .nav-menu {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding-bottom: 15px;
+        display: none;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .left-panel {
+        display: none;
+    }
+    .principal {
+        width: fit-content;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .blocs {
+        width: fit-content;
+        display: inline;
+        .bloc {
+            padding-right: 10px;
+            padding-left: 10px;
+            .img-container {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) {
+    .burger-logo {
+        display: none;
+    }
+    .header {
+        display:flex;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .corps {
+        max-width: 1070px;
+        margin-top: 20px;
+        column-gap: 20px;
+        .principal {
+            width: 75vw;
+            .bloc {
+                flex-basis: 40%;
+                padding-top: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+                .text-replacing-image {
+                    display: none;
+                }
+            }
+        } 
+    }
+}
+
+
+
+
+
+
+
+// Page log in
+
+.log-in-bloc {
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    width:570px;
+    padding-top: 67px;
+    justify-content: center;
+    padding-bottom: 60px;
+
+    .log-in-txt {
+        font-size: 32px;
+        margin-left: 60px;
+    }
+
+    .form {
+        margin-left: 60px;
+        height:45px;
+        width:450px;
+        margin-top: 20px;
+        
+
+        .input-field-login {
+            text-indent: 6px;
+            width: 450px;
+            font-size: 16px;
+            height:45px;
+            &:valid:focus {
+                outline: solid $green;
+            }
+            &:invalid:focus {
+            outline: solid red;
+            }
+        }
+
+        .input-field-password {
+            text-indent: 6px;
+            width: 450px;
+            font-size: 16px;
+            height:45px;
+            &:focus {
+                outline: solid $green;
+            }
+        }
+    }
+
+    .button-login {
+        font-weight: $regular-font-weight;
+        display: flex;
+        white-space: nowrap;
+        line-height: 1;
+        background-color:$green;
+        font-size: 14px;
+        padding: 10px 15px;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        width: 450px;
+        height: 42px;
+        margin: auto;
+        margin-top: 20px;
+        border: none;
+        &:hover {
+            background-color: $active-link-background-darkgreen;
         }
     }
 }
